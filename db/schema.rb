@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_154510) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_152359) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,14 +38,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_154510) do
     t.index ["user_id"], name: "index_favourite_drinks_on_user_id"
   end
 
+  create_table "tab_drinks", force: :cascade do |t|
+    t.bigint "tab_id", null: false
+    t.bigint "drink_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drink_id"], name: "index_tab_drinks_on_drink_id"
+    t.index ["tab_id"], name: "index_tab_drinks_on_tab_id"
+  end
+
   create_table "tabs", force: :cascade do |t|
     t.datetime "start_datetime"
     t.datetime "end_datetime"
     t.bigint "user_id", null: false
-    t.bigint "drink_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["drink_id"], name: "index_tabs_on_drink_id"
     t.index ["user_id"], name: "index_tabs_on_user_id"
   end
 
@@ -70,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_154510) do
   add_foreign_key "drinks", "categories"
   add_foreign_key "favourite_drinks", "drinks"
   add_foreign_key "favourite_drinks", "users"
-  add_foreign_key "tabs", "drinks"
+  add_foreign_key "tab_drinks", "drinks"
+  add_foreign_key "tab_drinks", "tabs"
   add_foreign_key "tabs", "users"
 end
