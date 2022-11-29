@@ -1,4 +1,4 @@
 class FavouriteDrink < ApplicationRecord
-  has_many :drinks
+  belongs_to :drink
   belongs_to :user
 end

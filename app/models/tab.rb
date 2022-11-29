@@ -1,4 +1,4 @@
 class Tab < ApplicationRecord
   belongs_to :user
-  has_many :drinks
+  has_many :tab_drinks
 end

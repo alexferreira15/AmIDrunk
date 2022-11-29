@@ -1,20 +1,21 @@
 class FavouriteDrinksController < ApplicationController
-  before_action :set_fds, only: %i[edit update]
+  before_action :set_fds, only: %i[destroy]
 
-  # pode não estar bem, consultar depois com o luca e apagar esta linha - Alex F.
-
-  def edit
+  def create
+    @fd = FavouriteDrink.new(fd_params)
+    @fd.save!
+    # redirect_to
   end
 
-  def update
-    @fds.update(fd_params)
-    # redirect_to fd_path(@fds)
+  def destroy
+    @fd.destroy
+    # redirect_to
   end
 
   private
 
   def set_fds
-    @fd = Favourite_drink.find(params[:id])
+    @fd = FavouriteDrink.find(params[:id])
   end
 
   def fd_params
