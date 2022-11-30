@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :tabs
   has_many :favourite_drinks
+  has_one_attached :photo
 end
