@@ -1,2 +1,9 @@
-<h1>TEST DASHBOARD PAGE</h1>
-<%= cl_image_tag current_user.photo.key, class:".avatar-bordered"  %>
+<div class="container d-flex align-items-center justify-content-between mx-2">
+  <div>
+    <%= cl_image_tag current_user.photo.key, width: 65, height: 65, crop: :thumb, gravity: :face, class: "dashboard-user-pic" %>
+  </div>
+  <div class="dashboard-greeting">
+    <h1>Hi, <%= current_user.username %>!</h1>
+    <p>You already had "sum of todays tab"</p>
+  </div>
+</div>
