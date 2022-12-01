@@ -9,9 +9,9 @@
 
 
     <div class="logo-AID">
-      <%= link_to user_dashboard_path(current_user.id), class: "navbar-brand" do %>
-        <%= image_tag "logo.png" %>
-      <% end %>
+      <%# <%= link_to user_dashboard_path(current_user.id), class: "navbar-brand" do %>
+        <%# <%= image_tag "logo.png" %>
+      <%# <% end %> %> %> %>
     </div>
 
     <div class="profile-user">
@@ -49,9 +49,9 @@
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to user_path(current_user.id), class: "nav-link" do %>
-          Profile <i class="fa-regular fa-id-badge"></i>
-        <% end %>
+        <%# <%= link_to user_path(current_user.id), class: "nav-link" do %>
+          <%# Profile <i class="fa-regular fa-id-badge"></i>
+        <% end %> %> %>
       </li>
       <li class="nav-item">
         <%= link_to destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete} do %>
