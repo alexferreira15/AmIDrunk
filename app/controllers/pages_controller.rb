@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
+    # @user = User.find(params[:id])
+    # params[:user_id] = @user.id
   end
-
 end
