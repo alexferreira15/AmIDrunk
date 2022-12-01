@@ -1,6 +1,18 @@
 <div id="profile">
-  <%= cl_image_tag @user.photo.key, class: "user-img" %>
+  <div class="user-main-info">
+    <%= cl_image_tag @user.photo.key, class: "user-img", crop: :thumb, gravity: :face %>
+    <p class="user-title"><u><%#= @user.username%>alexandre9915</u></p>
+    <p class="user-subtitle"><%#= @user.first_name @user.last_name%>Alexandre Ferreira</p>
+  </div>
 
+  <ul class="user-details">
+    <li class="user-details-header">Gender</li>
+    <li class="user-details-p"><%#= @user.gender%>Male</li>
+    <li class="user-details-header">Height</li>
+    <li class="user-details-p"><%#= @user.height%>175 cm</li>
+    <li class="user-details-header">Weight</li>
+    <li class="user-details-p"><%#= @user.weight%>62 kg</li>
+  </ul>
 
-  <p class="user-title"><%= @user.email %></p>
+  
 </div>
