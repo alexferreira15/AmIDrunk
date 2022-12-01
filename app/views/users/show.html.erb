@@ -1,1 +1,6 @@
-<p>123456</p>
+<div id="profile">
+  <%= cl_image_tag @user.photo.key, class: "user-img" %>
+
+
+  <p class="user-title"><%= @user.email %></p>
+</div>
