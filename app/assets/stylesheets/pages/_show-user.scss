@@ -2,9 +2,62 @@
   color: white;
 }
 
+.user-main-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .user-title {
   // color: white;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
+  margin-top: 1rem;
+  color: #929292
+}
+
+.user-subtitle {
+  // color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: -1rem;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  margin-top: 2rem;
+}
+
+.user-details{
+  // margin-left: 41.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.user-details .user-details-header {
+  color: #929292;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.user-details .user-details-p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
 }
