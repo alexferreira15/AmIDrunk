@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users, only: [] do
+  resources :users, only: %i[show] do
     resources :tabs, only: %i[index create update]
     get "dashboard", to: "pages#dashboard"
   end
