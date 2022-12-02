@@ -20,19 +20,22 @@
 
 <%# Wine %>
 
-<div class= 'card-drinks'>
-  <div class= "img-drinks">
-    <img src="" alt="">
-  </div>
-  <div class= "drink-details">
-    <div id= "drink-name">
-      <p> Drink Name </p>
+  <div class= 'card-drinks'>
+    <div class= "img-drinks">
+      <img src="" alt="">
     </div>
-    <div id= "alcohol-percentage">
-      <p> % Alcohol </p>
+    <div class= "drink-details">
+      <div id= "drink-name">
+        <p> <%= drink.name %> </p>
+      </div>
+      <div id= "alcohol-percentage">
+        <p> <%= drink.alcohol %>  </p>
+      </div>
+    </div>
+    <div id= "btn-add-drink">
+      <a href="url" id= "add-drink-text"> Add to Bar Tab </a>
     </div>
   </div>
-</div>
 
 <%# Spirits %>
 
@@ -47,4 +50,3 @@
 <%= current_user.tabs.each do |tab| %>
   <%= tab %>
 <% end %>
-
