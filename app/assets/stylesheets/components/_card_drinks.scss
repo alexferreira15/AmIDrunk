@@ -1,9 +1,16 @@
 .card-drinks {
   display: flex;
-  
+  align-items: center ;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  height: 88px;
+  border-radius: 20px;
+  background-color: #2A2A2A;
+  width: 95%;
 }
 
 .drink-details {
+align-items: flex-end;
 
 }
 
@@ -13,4 +20,18 @@
 
 #alcohol-percentage {
 
+}
+
+#btn-add-drink {
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  height: 44px;
+  background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
+  border-radius: 10px;
+}
+
+#add-drink-text {
+  color: #2A2A2A;
+  text-decoration: none;
 }
