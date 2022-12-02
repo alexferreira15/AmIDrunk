@@ -53,7 +53,7 @@
       <ul class="navbar-nav me-auto text-end">
         <li class="nav-item">
           <% if user_signed_in? %>
-          <%= link_to "#", class: "nav-link" do %>
+          <%= link_to tabs_path, class: "nav-link" do %>
             <i class="fa-solid fa-clock-rotate-left"></i> History
           <% end %>
         </li>
