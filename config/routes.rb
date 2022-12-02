@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   end
 
   resources :tabs, only: %i[index show new create update]
+  resources :drinks, only: %i[index]
 
   root to: "pages#home"
 
 
 end
+
+# link_to drinks_path(category: "beer")
