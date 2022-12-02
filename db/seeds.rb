@@ -180,3 +180,10 @@ drink_twenty_seven = Drink.new(name: "Brandy Shot", alcohol: 40, category_id: 6,
 # file = URI.open('')
 drink_twenty_seven.photo.attach(io: file, filename: "", content_type: 'image/jpg')
 drink_twenty_seven.save!
+
+
+
+
+
+
+
