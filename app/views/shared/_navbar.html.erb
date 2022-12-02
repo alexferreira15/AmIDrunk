@@ -1,63 +1,78 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid d-flex justify-content-between">
+<% if current_user %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid d-flex justify-content-between">
 
-    <div class="burger">
-      <button class="navbar-toggler" style="border:0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""><i class="fa-solid fa-bars" style="color:white"></i></span>
-      </button>
+      <div class="burger">
+        <button class="navbar-toggler" style="border:0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""><i class="fa-solid fa-bars" style="color:white"></i></span>
+        </button>
+      </div>
+
+
+      <div class="logo-AID">
+        <% if user_signed_in? %>
+          <%= link_to user_dashboard_path(current_user.id), class: "navbar-brand" do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+        <% else %>
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+        <% end %>
+
+      </div>
+
+      <div class="profile-user">
+        <button class="navbar-toggler" style="border:0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentProfile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""><i class="fa-solid fa-user" style="color:white"></i></span>
+        </button>
+      </div>
     </div>
 
-
-    <div class="logo-AID">
-      <%= link_to "#", class: "navbar-brand" do %>
-        <%= image_tag "logo.png" %>
-      <% end %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="fa-solid fa-gamepad"></i> Games
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="fa-solid fa-comments"></i> Chatrooms
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="fa-solid fa-map-location-dot"></i> Maps
+          <% end %>
+        </li>
+      </ul>
     </div>
 
-    <div class="profile-user">
-      <button class="navbar-toggler" style="border:0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentProfile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""><i class="fa-solid fa-user" style="color:white"></i></span>
-      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContentProfile">
+      <ul class="navbar-nav me-auto text-end">
+        <li class="nav-item">
+          <% if user_signed_in? %>
+          <%= link_to tabs_path, class: "nav-link" do %>
+            <i class="fa-solid fa-clock-rotate-left"></i> History
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+            <%= link_to user_path(current_user.id ), class: "nav-link" do %>
+              <i class="fa-regular fa-id-badge"></i> Profile
+            <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to destroy_user_session_path, class: "nav-link", data: {turbo_method: :delete} do %>
+            <i class="fa-solid fa-power-off"></i> Log out
+          <% end %>
+        </li>
+        <% else %>
+
+        <% end %>
+      </ul>
     </div>
   </div>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto">
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link" do %>
-          <i class="fa-solid fa-gamepad"></i> Games
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link" do %>
-          <i class="fa-solid fa-comments"></i> Charooms
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link" do %>
-          <i class="fa-solid fa-map-location-dot"></i> Maps
-        <% end %>
-      </li>
-    </ul>
-  </div>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContentProfile">
-    <ul class="navbar-nav me-auto text-end">
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link" do %>
-          History <i class="fa-solid fa-clock-rotate-left"></i>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link" do %>
-          Profile <i class="fa-regular fa-id-badge"></i>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "#", class: "nav-link", data: {turbo_method: :delete} do %>
-          Log out <i class="fa-solid fa-power-off"></i>
-        <% end %>
-      </li>
-    </ul>
-  </div>
-</div>
+<% end %>

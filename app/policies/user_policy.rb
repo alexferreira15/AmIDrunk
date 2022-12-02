@@ -1,4 +1,4 @@
-class TabPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -6,7 +6,7 @@ class TabPolicy < ApplicationPolicy
     end
   end
 
-  def index?
+  def show?
     true
   end
 end
