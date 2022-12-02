@@ -2,13 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: %i[show] do
-    resources :tabs, only: %i[index create update]
     get "dashboard", to: "pages#dashboard"
   end
 
-  root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :tabs, only: %i[index show new create update]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: "pages#home"
+
+
 end

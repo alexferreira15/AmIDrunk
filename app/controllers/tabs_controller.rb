@@ -3,10 +3,17 @@ class TabsController < ApplicationController
     @tabs = policy_scope(Tab)
   end
 
+  def new
+    @tab = Tab.new
+    authorize @tab
+  end
+
   def create
-    @tab = Tab.new(fd_params)
+    @tab = Tab.new
+    @tab.user_id = current_user.id
+    @tab.start_datetime = Time.new
     @tab.save!
-    # redirect_to
+    redirect_to tab_path(@tab)
   end
 
   def update
@@ -15,4 +22,9 @@ class TabsController < ApplicationController
     # redirect_to
   end
 
+  private
+
+  def skip_pundit?
+    params[:controller] =~ /^tabs$/
+  end
 end
