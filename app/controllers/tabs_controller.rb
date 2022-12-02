@@ -1,6 +1,6 @@
 class TabsController < ApplicationController
   def index
-    @tabs = policy_scope(Tab)
+    @tabs = current_user.tabs
   end
 
   def new
