@@ -16,6 +16,10 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "last-name" }%>
+
+    <%= f.input :gender,
+                collection: [ "Male", "Female", "Alien" ]%>
+
     <%= f.input :height, placeholder: "cm",
                 required: true,
                 autofocus: true,
