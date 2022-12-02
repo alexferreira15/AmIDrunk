@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [] do
     resources :tabs, only: %i[index create update]
     get "dashboard", to: "pages#dashboard"
+
   end
 
   root to: "pages#home"
