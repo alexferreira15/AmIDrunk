@@ -3,6 +3,10 @@ class TabsController < ApplicationController
     @tabs = current_user.tabs
   end
 
+  def show
+    @tab = Tab.find(params[:id])
+  end
+
   def new
     @tab = Tab.new
     authorize @tab
