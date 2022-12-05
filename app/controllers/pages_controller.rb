@@ -18,5 +18,16 @@ class PagesController < ApplicationController
     @shots = Drink.where(category_id: 6)
 
     @grouped_drinks = @tab.tab_drinks.group_by { |tab_drink| tab_drink.drink }
+
+    @percentage = 0
+
+    @tab.tab_drinks.each do |drink|
+      selected_drink = Drink.find(drink.drink_id)
+      volume = selected_drink.volume
+      alcohol = selected_drink.alcohol
+      weight = current_user.weight
+      @percentage += ((volume * alcohol * 0.8) / (weight * 0.6) / 100)
+    end
+    @percentage = @percentage.round(2)
   end
 end

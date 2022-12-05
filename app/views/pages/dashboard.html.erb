@@ -11,26 +11,51 @@
 
 </div>
 
-<div class="container my-3 px-4">
+<div class="container my-3 px-4" style="b">
 
-  <div class="container status-display">
+  <% if @percentage <= 0.2 %>
 
-    <div class="row">
-      <div class="col-12">
-        <h2>0.2% of alcohool</h2>
+    <div class="container status-display" style="background: linear-gradient(180deg, #91F5AD 0%, #2DE360 100%)">
+      <div class="row">
+        <div class="col-12">
+          <h2><%= @percentage %> % of alcohool</h2>
+        </div>
       </div>
-
+      <div class="row">
+        <div class="col-12">
+          <p>Still Good to drive</p>
+        </div>
+      </div>
+    </div>
+  <% elsif @percentage > 0.5  %>
+    <div class="container status-display" style="background: linear-gradient(180deg, #EB7575 0%, #F95454 100%)">
+      <div class="row">
+        <div class="col-12">
+          <h2><%= @percentage %> % of alcohool</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>Dont drive</p>
+        </div>
+      </div>
     </div>
 
-    <div class="row">
+  <% else %>
 
-      <div class="col-12">
-        <p>Still Good to drive</p>
+    <div class="container status-display" style="background: linear-gradient(180deg, #FFEEB4 0%, #FAC81E 100%)">
+      <div class="row">
+        <div class="col-12">
+          <h2><%= @percentage %> % of alcohool</h2>
+        </div>
       </div>
-
+      <div class="row">
+        <div class="col-12">
+          <p>Be careful</p>
+        </div>
+      </div>
     </div>
-  </div>
-
+  <% end %>
 </div>
 
 <div class= "textinside" data-controller="drinks">
