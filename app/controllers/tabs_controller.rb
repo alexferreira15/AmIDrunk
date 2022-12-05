@@ -9,7 +9,6 @@ class TabsController < ApplicationController
 
   def new
     @tab = Tab.new
-    authorize @tab
   end
 
   def create
