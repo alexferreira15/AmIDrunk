@@ -16,5 +16,7 @@ class PagesController < ApplicationController
     @cocktails = Drink.where(category_id: 4)
     @cyders = Drink.where(category_id: 5)
     @shots = Drink.where(category_id: 6)
+
+    @grouped_drinks = @tab.tab_drinks.group_by { |tab_drink| tab_drink.drink }
   end
 end
