@@ -6,7 +6,7 @@
 
   <div class="dashboard-greeting">
     <h1>Hi, <%= current_user.username %>!</h1>
-    <p>You already had "sum of todays tab"</p>
+    <p>You already had <%= @tab.tab_drinks.count %> drinks!</p>
   </div>
 
 </div>
