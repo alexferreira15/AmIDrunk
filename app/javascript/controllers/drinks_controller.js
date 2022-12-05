@@ -2,10 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="drinks"
 export default class extends Controller {
-  static targets = ["drinks", "beers", "wines", "spirits", "cocktails", "cyders", "shots"]
+  static targets = ["bartab", "drinks", "beers", "wines", "spirits", "cocktails", "cyders", "shots"]
 
   connect() {
     console.log(this.drinksTargets);
+  }
+
+  printBarTab() {
+    // document.location.reload(); -> para dar reload e apagar tudo
+    // const drink = "<% @beers.each do |beer| %><li><%= beer.name %></li><% end %>"
+    // this.beersTarget.insertAdjacentHTML("beforeend", drink)
+    this.#hideTabs()
+    this.bartabTarget.classList.remove("d-none")
   }
 
   printBeers() {

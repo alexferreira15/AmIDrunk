@@ -10,16 +10,23 @@
 }
 
 .img-drinks {
+  display: flex;
+  justify-content: center;
   height: 88px;
   width: 88px;
-  background-color: gray;
+  background-color: rgb(207, 207, 207);
   border-radius: 20px;
 }
 
+.img-drinks img {
+  height: 88px;
+  border-radius: 20px;
+
+}
 .drink-details {
-justify-content: center;
-align-items: center;
-align-items: flex-end;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
 }
 
 #drink-name {
@@ -34,13 +41,15 @@ align-items: flex-end;
   display: flex;
   align-items: center ;
   justify-content: center;
-  height: 88px;
+  height: 44px;
+  width: 44px;
   background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 #add-drink-text {
   color: #2A2A2A;
   text-decoration: none;
   margin: 10px;
+  font: bold;
 }
