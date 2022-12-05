@@ -12,7 +12,8 @@
       </div>
     </div>
     <div id= "btn-add-drink">
-      <a href="#" id= "add-drink-text"> Add </a>
+      <%# <a href="" id= "add-drink-text"> Add </a> %>
+      <%= render "add-form", drink: drink, tab_drink: @tab_drink, id: "add-drink-text" %>
     </div>
   </div>
 <% end %>

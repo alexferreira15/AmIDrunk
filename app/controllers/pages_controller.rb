@@ -6,6 +6,9 @@ class PagesController < ApplicationController
 
   def dashboard
     @tab = Tab.where(user: current_user).to_a.find { |tab| !tab.finished? }
+    @tab ||= Tab.create(user: current_user, start_datetime: Time.now)
+    @tab_drink = TabDrink.new
+
     @drinks = Drink.all
     @wines = Drink.where(category_id: 1)
     @beers = Drink.where(category_id: 2)
