@@ -1,18 +1,21 @@
-<% tab.tab_drinks.each do |tab_drink| %>
+<% @grouped_drinks.each do |drink, tab_drinks| %>
   <div class= 'card-drinks'>
     <div class= "img-drinks">
       <img src="https://res.cloudinary.com/dqwh6jkno/image/upload/v1670237975/cocktail_ad7i5u.png" alt="cocktail">
     </div>
     <div class= "drink-details">
       <div id= "drink-name">
-        <p> <%= tab_drink.drink.name %> </p>
+        <p> <%= drink.name %> </p>
       </div>
       <div id= "alcohol-percentage">
-        <p> <%= tab_drink.drink.alcohol %> % </p>
+        <p> <%= drink.alcohol %> % </p>
+      </div>
+      <div id= "alcohol-percentage">
+        <p> Counter: <%= tab_drinks.count %> </p>
       </div>
     </div>
     <div id= "btn-add-drink">
-      <a href="#" id= "add-drink-text"> + </a>
+      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+", id: "add-drink-text" %>
     </div>
   </div>
 <% end %>
