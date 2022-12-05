@@ -10,12 +10,19 @@
 }
 
 .img-drinks {
+  display: flex;
+  justify-content: center;
   height: 88px;
   width: 88px;
-  background-color: gray;
+  background-color: rgb(207, 207, 207);
   border-radius: 20px;
 }
 
+.img-drinks img {
+  height: 88px;
+  border-radius: 20px;
+
+}
 .drink-details {
 justify-content: center;
 align-items: center;

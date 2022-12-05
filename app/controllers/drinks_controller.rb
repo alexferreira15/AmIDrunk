@@ -1,7 +1,7 @@
 class DrinksController < ApplicationController
   def index
     if params[:category].present?
-      @drinks = Drink.where(category: params["beer"])
+      @drinks = Drink.where(category: params[""])
     else
       @drinks = Drink.all
     end
