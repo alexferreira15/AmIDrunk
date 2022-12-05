@@ -4,13 +4,8 @@
 
 import { application } from "./application"
 
+import DrinksController from "./drinks_controller"
+application.register("drinks", DrinksController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-// Bellow he have the imports from the lecture on stimulus
-// import { Application } from "@hotwired/stimulus"
-// import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers"
-
-// window.Stimulus = Application.start()
-// const context = require.context("./controllers", true, /\.js$/)
-// Stimulus.load(definitionsFromContext(context))
