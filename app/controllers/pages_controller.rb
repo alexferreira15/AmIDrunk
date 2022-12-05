@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @tab = Tab.where(user: current_user).to_a.find { |tab| !tab.finished? }
     @drinks = Drink.all
     @wines = Drink.where(category_id: 1)
     @beers = Drink.where(category_id: 2)

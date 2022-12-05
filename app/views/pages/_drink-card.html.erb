@@ -1,3 +1,18 @@
 <% drinks.each do |drink| %>
-  <li><%= drink.name %></li>
+  <div class= 'card-drinks'>
+    <div class= "img-drinks">
+      <img src="https://res.cloudinary.com/dqwh6jkno/image/upload/v1670237975/cocktail_ad7i5u.png" alt="cocktail">
+    </div>
+    <div class= "drink-details">
+      <div id= "drink-name">
+        <p> <%= drink.name %> </p>
+      </div>
+      <div id= "alcohol-percentage">
+        <p> <%= drink.alcohol %> % </p>
+      </div>
+    </div>
+    <div id= "btn-add-drink">
+      <a href="#" id= "add-drink-text"> Add </a>
+    </div>
+  </div>
 <% end %>

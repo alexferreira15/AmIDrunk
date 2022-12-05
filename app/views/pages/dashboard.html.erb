@@ -49,6 +49,10 @@
     </header>
   </div>
 
+  <div data-drinks-target="bartab drinks" class="d-none">
+      <%= render 'bar-tab-cards', drinks: @tab_drinks %>
+  </div>
+
   <div data-drinks-target="beers drinks" class="d-none">
       <%= render 'drink-card', drinks: @beers %>
   </div>
