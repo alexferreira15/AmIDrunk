@@ -1,19 +1,21 @@
-<div class="container-lp">
+<div id= "full-body">
 
-  <div class="logo-lp">
-    <%= image_tag "logo.png" %>
-  </div>
+  <div class="container-lp">
 
-  <div class="disclaimer-lp">
-    <p id="disclaimer-text">This app was made by three professional drunks, therefore, the results shown are not scientifically accurate, so we won't take any responsibility for the shit you make while you're drunk !</p>    </div>
-  </div>
-
-  <div class="btn-startcontainer">
-    <div class="btn-start">
-      <%= link_to "Start the App", new_user_session_path, id: "startapp", class: "btn btn-ghost" %>
-      <%# <p id="startapp"><strong>LET'S GO !</strong></p> %>
+    <div class="logo-lp">
+      <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png", style:"width: 150px" %>
     </div>
-  </div>
+
+    <div class="disclaimer-lp bg-img">
+      <p id="disclaimer-text">This app was made by three professional drunks, therefore, the results shown are not scientifically accurate, so we won't take any responsibility for the shit you make while you're drunk !</p>    </div>
+    </div>
+
+    <div class="btn-startcontainer">
+      <div class="btn-start">
+        <%= link_to "Start the App", new_user_session_path, id: "startapp", class: "btn btn-ghost" %>
+        <%# <p id="startapp"><strong>LET'S GO !</strong></p> %>
+      </div>
+    </div>
 
   <div class="btn-readmorecontainer">
     <div class="btn-readmore">
@@ -25,4 +27,5 @@
     <i class="fa-solid fa-angles-down" style="font-size:25px"></i>
   </div>
 
+  </div>
 </div>

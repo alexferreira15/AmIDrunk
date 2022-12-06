@@ -1,12 +1,24 @@
 .container-lp{
-  background-color: #0D0D0D;
-  width: 100%;
+  // background-color: #0D0D0D;
+  text-align: center;
+  width: 100vw;
+}
+
+#full-body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://images.unsplash.com/photo-1532634666-c89557092b9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80");
+  background-position: center;
+  background-size: cover;
+
 }
 
 .logo-lp {
+  width: 150px;
   display: flex;
   justify-content: center;
   padding: 56px;
+  object-fit: contain;
 }
 
 .disclaimer-lp {
@@ -14,9 +26,11 @@
   margin-bottom: 56px;
   margin-left: 56px;
   margin-right: 56px;
-  background: linear-gradient(180deg, #989898 0%, #6b6b6b 100%);
+  background: linear-gradient(180deg, #989898b9 0%, #6b6b6baf 100%);
+  opacity: 1;
   color: white;
   border-radius: 15px;
+  box-shadow: gray 5 5 0;
 }
 
 #disclaimer-text {
@@ -35,7 +49,6 @@
   display: flex;
   align-items: center ;
   justify-content: center;
-  position: absolute;
   width: 300px;
   height: 88px;
   background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
