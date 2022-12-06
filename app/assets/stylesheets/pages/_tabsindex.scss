@@ -8,51 +8,51 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; }
 
 // Example two required styles --------------- /
-.example-two-header {
-  .logo {
+.horizontal-navbar {
+  border-top: 1px solid rgba(#2A2A2A, .4);
+  border-bottom: 1px solid rgba(#2A2A2A, .4);
+
+  .main-bar-tab {
     width: 25%; }
   nav {
     width: 75%; } }
 
 // Shared styles --------------- /
 header {
-  background: #2A2A2A; }
+  background: #0D0D0D; }
 
 // Examples
-.example-one-header,
-.example-two-header {
-  border-radius: 10px; }
+// .horizontal-navbar {
+//   border-radius: 10px; }
 
-// Logo
-.logo {
+// main-bar-tab
+.main-bar-tab {
   text-align: center; // only effective in example 2/3
   font-weight: 700;
-  color: #d1ccbe;
-  border-right: 1px solid rgba(#727c87, .4);
-  padding: 12px 24px 13px;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  color: white;
+  border-right: 1px solid rgba(#2A2A2A, .4);
+  padding: 19.5px 24px;
+  // border-top-left-radius: 25px;
+  // border-bottom-left-radius: 25px;
 }
 // Nav items
-.nav-item {
-  padding: 12px 16px 13px;
-
-  &:not(:last-child) {
-    border-right: 1px solid rgba(#727c87, .2); } }
+.horizontal-nav-item {
+  padding: 19.5px 16px;
+}
 
 // Setup/misc styles --------------- /
-* {
-  box-sizing: border-box; }
+// * {
+//   box-sizing: border-box; }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  max-width: 360px;
-  margin: 10vmin auto 0;
-  color: #989898;
-  line-height: 1.5; }
+// body {
+//   font-family: -apple-system, BlinkMacSystemFont,
+//     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+//     "Fira Sans", "Droid Sans", "Helvetica Neue",
+//     sans-serif;
+//   max-width: 360px;
+//   margin: 10vmin auto 0;
+//   color: #989898;
+//   line-height: 1.5; }
 
 // Remove the inline-block extra space
 header,
@@ -60,23 +60,29 @@ nav {
   font-size: 0; }
 
 // Requires font size to be reset for these elements
-.logo,
-.nav-item {
+.main-bar-tab,
+.horizontal-nav-item {
   font-size: 14px; }
 
-.logo,
-.nav-item,
+.main-bar-tab,
+.horizontal-nav-item,
 .vertical-align-middle {
   display: inline-block;
   vertical-align: middle; }
 
-.title {
-  margin: 24px 0 6px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #999; }
+// .title {
+//   margin: 24px 0 6px;
+//   font-size: 12px;
+//   text-transform: uppercase;
+//   letter-spacing: .2em;
+//   color: #999; }
 
 // Demo purposes only, proceed with caution on Windows!
 .scroll::-webkit-scrollbar {
   display: none; }
+
+
+.horizontal-navbar-active {
+  border-bottom: 3px solid #FAC81E;
+  color: #FAC81E;
+}
