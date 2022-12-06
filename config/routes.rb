@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get "dashboard", to: "pages#dashboard"
   end
 
-  resources :tabs, only: %i[index show new create update]
+  resources :tabs, only: %i[index show new update create]
 
   resources :drinks, only: [] do
     resources :tab_drinks, only: %i[create]

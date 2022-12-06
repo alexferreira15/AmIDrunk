@@ -36,3 +36,15 @@
   flex-direction: column;
   color: #2A2A2A;
 }
+
+.close-tab-btn {
+  background: linear-gradient(180deg, #EB7575 0%, #F95454 100%);
+  height: 44px;
+  width: 370.5px;
+  border-radius: 15px;
+  margin: 20px 9.75px;
+}
+
+.close-tab-btn i {
+  font-family: 'Montserrat', sans-serif;
+}
