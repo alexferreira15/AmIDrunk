@@ -1,7 +1,7 @@
 <% @grouped_drinks.each do |drink, tab_drinks| %>
   <div class= 'card-drinks'>
     <div class= "img-drinks">
-      <img src="https://res.cloudinary.com/dqwh6jkno/image/upload/v1670237975/cocktail_ad7i5u.png" alt="cocktail">
+      <%= cl_image_tag drink.photo.key, crop: :fill %>
     </div>
     <div class= "drink-details">
       <div id= "drink-name">
