@@ -58,17 +58,25 @@
   <% end %>
 </div>
 
+<<<<<<< HEAD
 <div class= "container textinside" data-controller="drinks">
   <div class='container example-two'>
     <header class='example-two-header'>
       <span class='logo' data-action="click->drinks#printBarTab">BarTab</span>
+=======
+
+<div class= "textinside" data-controller="drinks">
+  <div>
+    <header class='horizontal-navbar'>
+      <span class='main-bar-tab horizontal-navbar-active' data-action="click->drinks#printBarTab" data-drinks-target="active active_bartab">BarTab</span>
+>>>>>>> master
       <nav class='vertical-align-middle scroll'>
-        <span class='nav-item' data-action="click->drinks#printBeers">Beers</span>
-        <span class='nav-item' data-action="click->drinks#printCyders">Cyders</span>
-        <span class='nav-item' data-action="click->drinks#printWines">Wines</span>
-        <span class='nav-item' data-action="click->drinks#printSpirits">Spirits</span>
-        <span class='nav-item' data-action="click->drinks#printCocktails">Cocktails</span>
-        <span class='nav-item' data-action="click->drinks#printShots">Shots</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printBeers" data-drinks-target="active active_beer">Beers</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printCyders" data-drinks-target="active active_cyder">Cyders</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printWines" data-drinks-target="active active_wines">Wines</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printSpirits" data-drinks-target="active active_spirits">Spirits</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printCocktails" data-drinks-target="active active_cocktail">Cocktails</span>
+        <span class='horizontal-nav-item' data-action="click->drinks#printShots" data-drinks-target="active active_shot">Shots</span>
 
       </nav>
     </header>
@@ -90,7 +98,7 @@
       <%= render 'drink-card', drinks: @wines %>
   </div>
 
-  <div data-drinks-target="spirtis drinks" class="d-none">
+  <div data-drinks-target="spirits drinks" class="d-none">
       <%= render 'drink-card', drinks: @spirits %>
   </div>
 
