@@ -1,4 +1,4 @@
-<div class="container d-flex align-items-center justify-content-between my-3 px-4">
+<div class="container d-flex align-items-center justify-content-around my-3 px-2">
 
   <div>
     <%= cl_image_tag current_user.photo.key, width: 65, height: 65, crop: :thumb, gravity: :face, class: "dashboard-user-pic me-4" %>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="container my-3 px-4">
+<div class="container my-3 px-2">
 
   <% if @percentage <= 0.2 %>
 
@@ -58,18 +58,11 @@
   <% end %>
 </div>
 
-<<<<<<< HEAD
-<div class= "container textinside" data-controller="drinks">
-  <div class='container example-two'>
-    <header class='example-two-header'>
-      <span class='logo' data-action="click->drinks#printBarTab">BarTab</span>
-=======
-
 <div class= "textinside" data-controller="drinks">
   <div>
     <header class='horizontal-navbar'>
       <span class='main-bar-tab horizontal-navbar-active' data-action="click->drinks#printBarTab" data-drinks-target="active active_bartab">BarTab</span>
->>>>>>> master
+
       <nav class='vertical-align-middle scroll'>
         <span class='horizontal-nav-item' data-action="click->drinks#printBeers" data-drinks-target="active active_beer">Beers</span>
         <span class='horizontal-nav-item' data-action="click->drinks#printCyders" data-drinks-target="active active_cyder">Cyders</span>
