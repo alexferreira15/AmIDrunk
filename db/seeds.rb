@@ -18,7 +18,7 @@ require 'open-uri'
 # User(2) - email, password, username, first_name, last_name, height, weight, gender
 user_one = User.create!(email: "as@lewagon.com", password: "123456", username: "andre94", first_name: "André", last_name: "Sardinha", height: 180, weight: 70, gender: "Male")
 file_user_one = URI.open('https://res.cloudinary.com/dqwh6jkno/image/upload/v1669897823/development/1o6yew5n39g4vu733qi8wu1pwk4y.jpg')
-user_one.photo.attach(io: file_user_one, filename: "", content_type: 'image/jpg')
+user_one.photo.attach(io: file_user_one, filename: "user photo", content_type: 'image/jpg')
 user_one.save!
 
 user_two = User.create!(email: "test@test.com", password: "123456", username: "testprofile", first_name: "test", last_name: "profile", height: 200, weight: 100, gender: "Female")

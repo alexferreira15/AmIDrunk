@@ -1,4 +1,4 @@
-<div class="container d-flex align-items-center justify-content-between my-3 px-4">
+<div class="container d-flex align-items-center justify-content-between my-3 px-4" style="width:100vw">
 
   <div>
     <%= cl_image_tag current_user.photo.key, width: 65, height: 65, crop: :thumb, gravity: :face, class: "dashboard-user-pic me-4" %>
@@ -6,12 +6,12 @@
 
   <div class="dashboard-greeting">
     <h1>Hi, <%= current_user.username %>!</h1>
-    <p>You already had <%= pluralize @tab.tab_drinks.count, "drink" %></p>
+    <p>You already had <strong><%= pluralize @tab.tab_drinks.count, "drink" %></strong>!</p>
   </div>
 
 </div>
 
-<div class="container my-3 px-4" style="b">
+<div class="container my-3 px-4"  style="width:100vw">
 
   <% if @percentage <= 0.2 %>
 
@@ -57,6 +57,7 @@
     </div>
   <% end %>
 </div>
+
 
 <div class= "textinside" data-controller="drinks">
   <div>
