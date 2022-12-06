@@ -7,10 +7,6 @@ class TabsController < ApplicationController
     @tab = Tab.find(params[:id])
   end
 
-  def new
-    @tab = Tab.new
-  end
-
   def create
     @tab = Tab.new
     @tab.user_id = current_user.id
@@ -21,8 +17,10 @@ class TabsController < ApplicationController
 
   def update
     @tab = Tab.find(params[:id])
+    @tab.end_datetime = Time.now
     @tab.save!
-    # redirect_to
+    Tab.new
+    redirect_to user_dashboard_path(current_user.id)
   end
 
   private

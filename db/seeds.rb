@@ -5,15 +5,16 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'open-uri'
 
 Tab.destroy_all
 Drink.destroy_all
 User.destroy_all
-Category.destroy_all
 FavouriteDrink.destroy_all
 TabDrink.destroy_all
+Category.destroy_all
 
-require 'open-uri'
+puts "Data Destroyed AlexF Gay"
 
 # User(2) - email, password, username, first_name, last_name, height, weight, gender
 user_one = User.create!(email: "as@lewagon.com", password: "123456", username: "andre94", first_name: "André", last_name: "Sardinha", height: 180, weight: 70, gender: "Male")
@@ -21,10 +22,14 @@ file_user_one = URI.open('https://res.cloudinary.com/dqwh6jkno/image/upload/v166
 user_one.photo.attach(io: file_user_one, filename: "user photo", content_type: 'image/jpg')
 user_one.save!
 
+puts "user 1 created"
+
 user_two = User.create!(email: "test@test.com", password: "123456", username: "testprofile", first_name: "test", last_name: "profile", height: 200, weight: 100, gender: "Female")
 file_user_two = URI.open('https://res.cloudinary.com/dxtsuiudu/image/upload/v1669307789/development/xypcuchz0jxoj2q2q977uwo49isi.jpg')
 user_two.photo.attach(io: file_user_two, filename: "", content_type: 'image/jpg')
 user_two.save!
+puts "user 2 created"
+
 
 # Categories(5) - name
 cat_one = Category.new(name: "Wines")
@@ -44,6 +49,8 @@ cat_five.save!
 
 cat_six = Category.new(name: "Shots")
 cat_six.save!
+
+puts "categories created"
 
 # Drinks(32) - name, alcohol, category_id, volume
 drink_one = Drink.new(name: "Red Wine", alcohol: 14, category_id: 1, volume: 175)
@@ -205,3 +212,5 @@ drink_thirty_two = Drink.new(name: "Brandy Shot", alcohol: 40, category_id: 6, v
 file = URI.open('https://res.cloudinary.com/dqwh6jkno/image/upload/v1670314506/Shot_Brandy_kafmrp.png')
 drink_thirty_two.photo.attach(io: file, filename: "", content_type: 'image/png')
 drink_thirty_two.save!
+
+puts "drinks created"
