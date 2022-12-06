@@ -21,10 +21,9 @@ class PagesController < ApplicationController
 
     @percentage = 0
 
-    @tab.tab_drinks.each do |drink|
-      selected_drink = Drink.find(drink.drink_id)
-      volume = selected_drink.volume
-      alcohol = selected_drink.alcohol
+    @tab.drinks.each do |drink|
+      volume = drink.volume
+      alcohol = drink.alcohol
       weight = current_user.weight
       @percentage += ((volume * alcohol * 0.8) / (weight * 0.6) / 100)
     end
