@@ -1,4 +1,4 @@
-<div class="container d-flex align-items-center justify-content-between my-3 px-4" style="width:100vw">
+<div class="container d-flex align-items-center justify-content-between my-3 px-4">
 
   <div>
     <%= cl_image_tag current_user.photo.key, width: 65, height: 65, crop: :thumb, gravity: :face, class: "dashboard-user-pic me-4" %>
@@ -11,7 +11,7 @@
 
 </div>
 
-<div class="container my-3 px-4"  style="width:100vw">
+<div class="container my-3 px-4">
 
   <% if @percentage <= 0.2 %>
 
@@ -58,7 +58,7 @@
   <% end %>
 </div>
 
-<div class= "container textinside" data-controller="drinks" style="width:100vw">
+<div class= "container textinside" data-controller="drinks">
   <div class='container example-two'>
     <header class='example-two-header'>
       <span class='logo' data-action="click->drinks#printBarTab">BarTab</span>

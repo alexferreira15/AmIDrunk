@@ -5,5 +5,5 @@ class Tab < ApplicationRecord
   def finished?
     end_datetime.present?
   end
-  
+
 end
