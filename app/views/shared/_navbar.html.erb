@@ -12,11 +12,11 @@
       <div class="logo-AID">
         <% if user_signed_in? %>
           <%= link_to user_dashboard_path(current_user.id), class: "navbar-brand" do %>
-            <%= image_tag "logo.png" %>
+            <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png" %>
           <% end %>
         <% else %>
           <%= link_to root_path, class: "navbar-brand" do %>
-            <%= image_tag "logo.png" %>
+            <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png" %>
           <% end %>
         <% end %>
 
