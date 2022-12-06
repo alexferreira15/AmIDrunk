@@ -14,8 +14,8 @@
         <p> Counter: <%= tab_drinks.count %> </p>
       </div>
     </div>
-    <div id= "btn-add-drink">
-      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+", id: "add-drink-text" %>
+    <div>
+      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+" %>
     </div>
   </div>
 <% end %>
