@@ -3,19 +3,12 @@
     <div class= "img-drinks">
       <%= cl_image_tag drink.photo.key, crop: :fill %>
     </div>
-    <div class= "drink-details">
-      <div id= "drink-name">
-        <p> <%= drink.name %> </p>
-      </div>
-      <div id= "alcohol-percentage">
-        <p> <%= drink.alcohol %> % </p>
-      </div>
-      <div id= "alcohol-percentage">
-        <p> Counter: <%= tab_drinks.count %> </p>
-      </div>
+    <div class= "drink-details-bartab">
+      <p class= "drink-name"><%= drink.name %> </p>
+      <p class= "alcohol-percentage"><%= drink.alcohol %> %</p>
     </div>
-    <div>
-      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+" %>
-    </div>
+    <p class= "drink-count"><%= tab_drinks.count %></p>
+
+    <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+" %>
   </div>
 <% end %>
