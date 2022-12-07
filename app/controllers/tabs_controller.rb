@@ -1,6 +1,7 @@
 class TabsController < ApplicationController
   def index
     @tabs = current_user.tabs
+    @user = User.find(current_user.id)
   end
 
   def show
