@@ -1,5 +1,6 @@
 <h1>TABS HISTORY HERE</h1>
 
-<%= current_user.tabs.each do |tab| %>
-  <%= tab %>
+<% current_user.tabs[0..-2].each do |tab| %>
+  <p>Percentage: <%= tab.final_percentage %> %</p>
+  <p>Total Drinks: <%= tab.tab_drinks.size %></p>
 <% end %>
