@@ -1,3 +1,7 @@
+<div>
+  <%= render 'shared/navbar' %>
+</div>
+
 <div id="profile">
   <div class="user-main-info">
     <%= cl_image_tag @user.photo.key, class: "user-img", crop: :thumb, gravity: :face %>
