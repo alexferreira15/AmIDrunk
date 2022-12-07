@@ -18,8 +18,17 @@ class TabsController < ApplicationController
   def update
     @tab = Tab.find(params[:id])
     @tab.end_datetime = Time.now
+
+    @percentage = 0
+
+    @tab.drinks.each do |drink|
+      volume = drink.volume
+      alcohol = drink.alcohol
+      weight = current_user.weight
+      @percentage += ((volume * alcohol * 0.8) / (weight * 0.6) / 100)
+    end
+    @tab.final_percentage = @percentage.round(2)
     @tab.save!
-    Tab.new
     redirect_to user_dashboard_path(current_user.id)
   end
 
