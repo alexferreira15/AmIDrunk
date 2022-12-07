@@ -2,58 +2,62 @@
   // background-color: #0D0D0D;
   text-align: center;
   width: 100vw;
+  margin-top: 60px;
 }
 
 #full-body {
   height: 100vh;
   width: 100vw;
-  background-image: url("https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80");
+  background-image: url("https://res.cloudinary.com/dqwh6jkno/image/upload/v1670321593/aleksandr-popov-DPspiXW2zWg-unsplash_l04n5h.jpg");
   background-position: center;
   background-size: cover;
+}
 
+.background-overlay{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.60);
+  overflow: hidden;
+  z-index: 2;
 }
 
 .logo-lp {
   display: flex;
   justify-content: center;
-  padding: 56px;
+  padding-top: 40px;
+  padding-bottom: 60px;
   object-fit: contain;
 }
 
 .disclaimer-lp {
+  font-size: 20px;
   display: flex;
-  margin-bottom: 56px;
-  margin-left: 56px;
-  margin-right: 56px;
-  background: linear-gradient(180deg, #989898b9 0%, #6b6b6baf 100%);
-  opacity: 1;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
   color: white;
-  border-radius: 15px;
-  box-shadow: 10px 5px 5px #1b1b1bab;
 }
 
 #disclaimer-text {
-  margin: 15px;
   text-align: center;
-
+  font-size: 20px;
+  text-shadow: 0 0 12px black;
 }
 
-.btn-startcontainer {
- justify-content: center;
- margin: 88px;
-
-}
-
-.btn-start {
+.btn-start-readmore {
   display: flex;
   justify-content: center;
-  height: 88px;
   background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
   border-radius: 20px;
   box-shadow: 10px 5px 5px #1b1b1bab;
+  margin-bottom: 40px;
+  align-items: center ;
+  position: absolute;
+  width: 80vw;
+  height: 55px;
 }
 
-.btn-start:hover {
+.btn-start-readmore:hover {
   background-color: linear-gradient(180deg, #38f96f 0%, #00b634 90%);
 }
 
@@ -64,30 +68,13 @@
   margin: 0;
   font-size: 20px;
   color: rgb(57, 57, 57);
-
-
 }
 
-.btn-readmorecontainer {
-  display: flex;
-  justify-content: center;
-  margin: 88px;
-
+.btn-start-readmorecontainer {
+   margin: 40px;
+   padding-top: 40px;
+   padding-bottom: 40px;
  }
-
-
-.btn-readmore {
-  display: flex;
-  align-items: center ;
-  justify-content: center;
-  position: absolute;
-  width: 300px;
-  height: 53px;
-  background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
-  border-radius: 20px;
-  box-shadow: 10px 5px 5px #1b1b1bab;
-
-}
 
 #readmore {
   align-items: center ;

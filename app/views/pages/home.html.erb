@@ -1,29 +1,37 @@
 <div id= "full-body">
 
-  <div class="container-lp">
+  <div class="background-overlay">
 
-    <div class="logo-lp">
-      <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png", style:"width: 150px" %>
+    <div class="container-lp">
+
+      <div class="logo-lp">
+        <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png", style:"width: 150px" %>
+      </div>
+
+      <div class="disclaimer-lp bg-img">
+        <p id="disclaimer-text">This app was made by three professional drunks, therefore, the results shown are not scientifically accurate, so we won't take any responsibility for the sh*t you make while you're drunk !</p>    </div>
+      </div>
+
+      <div class="btn-start-readmorecontainer">
+        <div class="btn-start-readmore">
+          <%= link_to "START THE APP", new_user_session_path, id: "startapp", class: "btn btn-ghost" %>
+        </div>
+      </div>
+
+      <div class="btn-start-readmorecontainer">
+        <div class="btn-start-readmore">
+          <p id="readmore">Read more</p>
+        </div>
+      </div>
+
+      <div class="btn-start-readmorecontainer">
+         <div id="angles-down">
+          <i class="fa-solid fa-angles-down" style="font-size:25px"></i>
+        </div>
+      </div>
+
     </div>
 
-    <div class="disclaimer-lp bg-img">
-      <p id="disclaimer-text">This app was made by three professional drunks, therefore, the results shown are not scientifically accurate, so we won't take any responsibility for the sh*t you make while you're drunk !</p>    </div>
-    </div>
-
-  <div class="btn-startcontainer">
-    <div class="btn-start">
-      <%= link_to "Start the App", new_user_session_path, id: "startapp", class: "btn btn-ghost" %>
-    </div>
-
-  <div class="btn-readmorecontainer">
-    <div class="btn-readmore">
-      <p id="readmore">READ MORE</p>
-    </div>
   </div>
 
-  <div id="angles-down">
-    <i class="fa-solid fa-angles-down" style="font-size:25px"></i>
-  </div>
-
-  </div>
 </div>
