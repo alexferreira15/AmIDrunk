@@ -11,12 +11,12 @@ class PagesController < ApplicationController
     @tab_drink = TabDrink.new
 
     @drinks = Drink.all
-    @wines = Drink.where(category_id: 1)
-    @beers = Drink.where(category_id: 2)
-    @spirits = Drink.where(category_id: 3)
-    @cocktails = Drink.where(category_id: 4)
-    @cyders = Drink.where(category_id: 5)
-    @shots = Drink.where(category_id: 6)
+    @wines = Drink.where(category: Category.find_by(name: "Wines"))
+    @beers = Drink.where(category: Category.find_by(name: "Beers"))
+    @spirits = Drink.where(category: Category.find_by(name: "Spirits"))
+    @cocktails = Drink.where(category: Category.find_by(name: "Cocktails"))
+    @cyders = Drink.where(category: Category.find_by(name: "Cyders"))
+    @shots = Drink.where(category: Category.find_by(name: "Shots"))
 
     @grouped_drinks = @tab.tab_drinks.group_by { |tab_drink| tab_drink.drink }
 
