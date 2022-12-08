@@ -3,9 +3,11 @@
   background: #0D0D0D;
   color: white;
   border-bottom: 1px solid #2A2A2A ;
-  min-height: 86px;
   font-size: 15px;
   font-weight: 700;
+  height:86px;
+  position:sticky;
+  top:0;
 }
 
 .navbar-lewagon .navbar-collapse {

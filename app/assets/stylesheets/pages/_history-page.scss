@@ -1,0 +1,25 @@
+.all-history-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.history-card {
+  width: 95%;
+  background-color: #2A2A2A;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.history-tab-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FAC81E;
+  margin-top: 1rem;
+}
+
+.history-tab-details {
+  font-size: 15px;
+  font-weight: 400;
+}

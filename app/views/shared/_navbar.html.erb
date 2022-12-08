@@ -12,17 +12,17 @@
       <div class="logo-AID">
         <% if user_signed_in? %>
           <%= link_to user_dashboard_path(current_user.id), class: "navbar-brand" do %>
-            <%= image_tag "logo.png" %>
+            <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png" %>
           <% end %>
         <% else %>
           <%= link_to root_path, class: "navbar-brand" do %>
-            <%= image_tag "logo.png" %>
+            <%= image_tag "https://res.cloudinary.com/dqwh6jkno/image/upload/v1670326911/black_yellow_logo_cuzdcc.png" %>
           <% end %>
         <% end %>
 
       </div>
 
-      <div class="profile-user">
+      <div class="profile-user" >
         <button class="navbar-toggler" style="border:0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentProfile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""><i class="fa-solid fa-user" style="color:white"></i></span>
         </button>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContentProfile">
-      <ul class="navbar-nav me-auto text-end">
+      <ul class="navbar-nav me-auto text-end" style="background-color: black">
         <li class="nav-item">
           <% if user_signed_in? %>
           <%= link_to tabs_path, class: "nav-link" do %>

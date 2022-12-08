@@ -1,6 +1,18 @@
 .dashboard-user-pic {
   border-radius: 50%;
+}
 
+.just-nav{
+  position: sticky;
+  top: 317px;
+}
+
+.dashboard-fixed-container{
+  background-color: #0D0D0D;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
 }
 
 .dashboard-greeting {
@@ -35,6 +47,7 @@
   align-items: center ;
   flex-direction: column;
   color: #2A2A2A;
+  position: relative;
 }
 
 .close-tab-btn {

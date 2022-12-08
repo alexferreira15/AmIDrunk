@@ -48,7 +48,14 @@
 }
 
 .user-details .user-details-header {
-  color: #929292;
+  background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px #1b1b1bab;
+  color: rgb(57, 57, 57);
+  padding: 5px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -57,7 +64,27 @@
 .user-details .user-details-p {
   font-style: normal;
   font-weight: 400;
-  font-size: 11px;
-  margin-bottom: 1.5rem;
+  font-size: 15px;
+  margin-bottom: 2rem;
   margin-top: 0.25rem;
+}
+
+.fav-drinks {
+  background: linear-gradient(180deg, #FAC81E 0%, #FAC81EAD 100%);
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px #1b1b1bab;
+  color: rgb(57, 57, 57);
+  padding: 5px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+
+}
+
+.user-details .fav-drinks-p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 1rem;
 }
