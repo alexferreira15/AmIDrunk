@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="drinks"
 export default class extends Controller {
-  static targets = ["bartab", "drinks", "beers", "wines", "spirits", "cocktails", "cyders", "shots", "active", "active_beer", "active_cyder", "active_wines", "active_spirits", "active_cocktail", "active_shot"]
+  static targets = ["bartab", "drinks", "favdrinks", "beers", "wines", "spirits", "cocktails", "cyders", "shots", "active", "active_beer", "active_cyder", "active_wines", "active_spirits", "active_cocktail", "active_shot", "active_fav_drinks"]
 
   printBarTab() {
     // document.location.reload(); -> para dar reload e apagar tudo
@@ -12,6 +12,16 @@ export default class extends Controller {
     this.#changeActive()
     this.bartabTarget.classList.remove("d-none")
     this.activeTarget.classList.add("horizontal-navbar-active")
+  }
+
+  printFavDrinks() {
+    // document.location.reload(); -> para dar reload e apagar tudo
+    // const drink = "<% @beers.each do |beer| %><li><%= beer.name %></li><% end %>"
+    // this.beersTarget.insertAdjacentHTML("beforeend", drink)
+    this.#hideTabs()
+    this.#changeActive()
+    this.favdrinksTarget.classList.remove("d-none")
+    this.active_fav_drinksTarget.classList.add("horizontal-navbar-active")
   }
 
   printBeers() {
