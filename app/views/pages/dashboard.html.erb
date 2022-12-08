@@ -77,23 +77,25 @@
     <% end %>
   </div>
 
-  <% if @percentage <= 0.3 %>
-    <div class="container" style="color: #2DE360; text-align:center">
-      <p>You are OK to drive!</p>
-    </div>
-  <% elsif @percentage > 0.3 && @percentage < 0.5  %>
-    <div class="container" style="color: #FAC81E; text-align:center">
-      <p>You are kind of OK to drive...</p>
-    </div>
-  <% elsif @percentage >= 0.5 && @percentage < 1  %>
-    <div class="container" style="color: #f88306; text-align:center">
-      <p>You shouldn't drive at this point.</p>
-    </div>
-  <% else %>
-    <div class="container" style="color: #F95454; text-align:center">
-      <p>DO NOT DRIVE AT ANY COST!</p>
-    </div>
-  <% end %>
+  <div>
+    <% if @percentage <= 0.3 %>
+        <div class="container" style="color: #2DE360; text-align:center">
+          <p>You're OK to drive!</p>
+        </div>
+    <% elsif @percentage > 0.3 && @percentage < 0.5  %>
+        <div class="container" style="color: #FAC81E; text-align:center">
+          <p>You're kind of OK to drive...</p>
+        </div>
+    <% elsif @percentage >= 0.5 && @percentage < 1  %>
+        <div class="container" style="color: #f88306; text-align:center">
+          <p>You're NOT OK to drive!</p>
+        </div>
+    <% else %>
+      <div class="container" style="color: #F95454; text-align:center">
+        <p>DO NOT DRIVE AT ANY COST!</p>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 
