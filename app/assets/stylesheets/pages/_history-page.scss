@@ -6,10 +6,10 @@
 
 .history-card {
   width: 95%;
-  background-color: #2A2A2A;
-  text-align: center;
+  // text-align: center;
   margin: 20px auto;
   border-radius: 20px;
+  padding-left: 10px;
 }
 
 .history-tab-title {
@@ -20,6 +20,8 @@
 }
 
 .history-tab-details {
+  margin: 8px;
   font-size: 15px;
   font-weight: 400;
+  color: #2A2A2A;
 }

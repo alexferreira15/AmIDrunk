@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
+
   def dashboard
     @tab = Tab.where(user: current_user).to_a.find { |tab| !tab.finished? }
     @tab ||= Tab.create(user: current_user, start_datetime: Time.now)
@@ -28,5 +29,10 @@ class PagesController < ApplicationController
       @percentage += ((volume * alcohol * 0.8) / (weight * 0.6) / 100)
     end
     @percentage = @percentage.round(2)
+
+    @green_sentences = ["Save water, drink alcohol", "Are you even drinking ?", "Is water your best friend ?"].sample
+    @yellow_sentences = ["Be careful if driving. If not, keep going", "Don't need your glasses anymore", "It's hitting soon, beware"].sample
+    @orange_sentences = ["'Please don't drive' - Love, Mom'", "Make love, don't drive", "Party's ON, just don't drive"].sample
+    @red_sentences = ["Take it easy cowboy !", "You should find a plastic bag.", "Just don't lose your phone!"].sample
   end
 end

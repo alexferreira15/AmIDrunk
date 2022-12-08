@@ -6,7 +6,7 @@
   <div class="user-main-info">
     <%= cl_image_tag @user.photo.key, class: "user-img", crop: :thumb, gravity: :face %>
     <p class="user-title"><%= @user.first_name %> <%= @user.last_name %></p>
-    <p class="user-subtitle"><u><%= @user.username%></u></p>
+    <p class="user-subtitle"><%= @user.username%></p>
   </div>
 
   <ul class="user-details">

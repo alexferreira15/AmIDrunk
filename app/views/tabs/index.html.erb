@@ -9,12 +9,31 @@
 
   <div class="all-history-cards">
     <% current_user.tabs[0..-2].reverse.each do |tab| %>
-      <div class="history-card">
-        <p class="history-tab-title">Tab #<%= tab.id %></p>
-        <p class="history-tab-details"><%= tab.end_datetime.strftime("%d/%m/%Y %H:%M") %></p>
-        <p class="history-tab-details"><%= tab.final_percentage %> g/L of alcohol in your blood</p>
-        <p class="history-tab-details">Total Drinks: <%= tab.tab_drinks.size %></p>
-      </div>
+      <% if tab.final_percentage <= 0.3 %>
+        <div class="history-card" style="background: linear-gradient(180deg, #91F5AD 0%, #2DE360 100%)">
+          <p class="history-tab-details"><%= tab.end_datetime.strftime("%d/%m/%Y %H:%M") %></p>
+          <p class="history-tab-details"><%= tab.final_percentage %> g/L of alcohol in your blood</p>
+          <p class="history-tab-details">Total Drinks: <%= tab.tab_drinks.size %></p>
+        </div>
+      <% elsif tab.final_percentage > 0.3 && tab.final_percentage < 0.5 %>
+        <div class="history-card" style="background: linear-gradient(180deg, #FFEEB4 0%, #FAC81E 100%)">
+          <p class="history-tab-details"><%= tab.end_datetime.strftime("%d/%m/%Y %H:%M") %></p>
+          <p class="history-tab-details"><%= tab.final_percentage %> g/L of alcohol in your blood</p>
+          <p class="history-tab-details">Total Drinks: <%= tab.tab_drinks.size %></p>
+        </div>
+      <% elsif tab.final_percentage >= 0.5 && tab.final_percentage < 1  %>
+        <div class="history-card" style="background: linear-gradient(180deg, #eb9c75 0%, #f88306 100%)">
+          <p class="history-tab-details"><%= tab.end_datetime.strftime("%d/%m/%Y %H:%M") %></p>
+          <p class="history-tab-details"><%= tab.final_percentage %> g/L of alcohol in your blood</p>
+          <p class="history-tab-details">Total Drinks: <%= tab.tab_drinks.size %></p>
+        </div>
+      <% else %>
+        <div class="history-card" style="background: linear-gradient(180deg, #EB7575 0%, #F95454 100%)">
+          <p class="history-tab-details"><%= tab.end_datetime.strftime("%d/%m/%Y %H:%M") %></p>
+          <p class="history-tab-details"><%= tab.final_percentage %> g/L of alcohol in your blood</p>
+          <p class="history-tab-details">Total Drinks: <%= tab.tab_drinks.size %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

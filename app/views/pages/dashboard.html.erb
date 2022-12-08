@@ -18,46 +18,59 @@
                                                 <%# percent card code  %>
   <div class="container my-3 px-2">
 
-    <% if @percentage <= 0.2 %>
-
-
+    <% if @percentage <= 0.3 %>
       <div class="container status-display" style="background: linear-gradient(180deg, #91F5AD 0%, #2DE360 100%)">
         <div class="row">
           <div class="col-12">
-            <h2><%= @percentage %> % of alcohool</h2>
+            <h2><%= @percentage %> g/L </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <p>Still Good to drive</p>
+            <%= @green_sentences %>
           </div>
         </div>
       </div>
-    <% elsif @percentage > 0.5  %>
-      <div class="container status-display" style="background: linear-gradient(180deg, #EB7575 0%, #F95454 100%)">
+
+    <% elsif @percentage > 0.3 && @percentage < 0.5  %>
+      <div class="container status-display" style="background: linear-gradient(180deg, #FFEEB4 0%, #FAC81E 100%)">
         <div class="row">
           <div class="col-12">
-            <h2><%= @percentage %> % of alcohool</h2>
+            <h2><%= @percentage %> g/L </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <p>Dont drive</p>
+            <%= @yellow_sentences %>
+          </div>
+        </div>
+      </div>
+
+    <% elsif @percentage >= 0.5 && @percentage < 1  %>
+      <div class="container status-display" style="background: linear-gradient(180deg, #eb9c75 0%, #f88306 100%)">
+        <div class="row">
+          <div class="col-12">
+            <h2><%= @percentage %> g/L </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <%= @orange_sentences %>
           </div>
         </div>
       </div>
 
     <% else %>
 
-      <div class="container status-display" style="background: linear-gradient(180deg, #FFEEB4 0%, #FAC81E 100%)">
+      <div class="container status-display" style="background: linear-gradient(180deg, #EB7575 0%, #F95454 100%)">
         <div class="row">
           <div class="col-12">
-            <h2><%= @percentage %> % of alcohool</h2>
+            <h2><%= @percentage %> g/L </h2>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <p>Be careful</p>
+            <%= @red_sentences %>
           </div>
         </div>
       </div>
