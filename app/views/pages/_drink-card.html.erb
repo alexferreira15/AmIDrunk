@@ -11,9 +11,9 @@
         <p> <%= drink.alcohol %> % </p>
       </div>
     </div>
-    <div id= "btn-add-drink">
+    <div>
       <%# <a href="" id= "add-drink-text"> Add </a> %>
-      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "Add", id: "add-drink-text" %>
+      <%= render "add-form", drink: drink, tab_drink: @tab_drink, placeholder: "+", id: "add-drink-text" %>
     </div>
   </div>
 <% end %>
