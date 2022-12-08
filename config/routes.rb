@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :tab_drinks, only: %i[create]
   end
 
+  resources :games, only: %i[index]
+
   root to: "pages#home"
 end
 
