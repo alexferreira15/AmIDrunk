@@ -106,7 +106,9 @@
       <header class='horizontal-navbar'>
         <span class='main-bar-tab horizontal-navbar-active' data-action="click->drinks#printBarTab" data-drinks-target="active active_bartab">BarTab</span>
 
+
           <nav class='vertical-align-middle scroll'>
+          <span class='horizontal-nav-item' data-action="click->drinks#printFavDrinks" data-drinks-target="active active_fav_drinks">Fav Drinks ⭐️</span>
           <span class='horizontal-nav-item' data-action="click->drinks#printBeers" data-drinks-target="active active_beer">Beers</span>
           <span class='horizontal-nav-item' data-action="click->drinks#printCyders" data-drinks-target="active active_cyder">Cyders</span>
           <span class='horizontal-nav-item' data-action="click->drinks#printWines" data-drinks-target="active active_wines">Wines</span>
@@ -123,6 +125,10 @@
     <div data-drinks-target="bartab drinks">
         <%= render 'bar-tab-cards', tab: @tab %>
         <%= render "form", tab: @tab %>
+    </div>
+
+    <div data-drinks-target="favdrinks drinks" class="d-none">
+        <%= render 'drink-card', drinks: @fav_drinks %>
     </div>
 
     <div data-drinks-target="beers drinks" class="d-none">

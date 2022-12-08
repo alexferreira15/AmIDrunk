@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     @cocktails = Drink.where(category: Category.find_by(name: "Cocktails"))
     @cyders = Drink.where(category: Category.find_by(name: "Cyders"))
     @shots = Drink.where(category: Category.find_by(name: "Shots"))
+    @fav_drinks = [Drink.find(19), Drink.find(6), Drink.find(29)]
 
     @grouped_drinks = @tab.tab_drinks.group_by { |tab_drink| tab_drink.drink }
 
