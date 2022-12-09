@@ -142,7 +142,7 @@ file = URI.open('https://res.cloudinary.com/dqwh6jkno/image/upload/v1670314504/G
 drink_eighteen.photo.attach(io: file, filename: "", content_type: 'image/png')
 drink_eighteen.save!
 
-drink_nineteen = Drink.new(name: "Moskow", alcohol: 11, category: cat_four, volume: 250)
+drink_nineteen = Drink.new(name: "Moskow Mule", alcohol: 11, category: cat_four, volume: 250)
 file = URI.open('https://res.cloudinary.com/dqwh6jkno/image/upload/v1670314504/Moskow_Mule_wnsdm6.png')
 drink_nineteen.photo.attach(io: file, filename: "", content_type: 'image/png')
 drink_nineteen.save!
