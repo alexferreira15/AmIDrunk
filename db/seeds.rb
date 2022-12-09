@@ -30,7 +30,6 @@ user_two.photo.attach(io: file_user_two, filename: "", content_type: 'image/jpg'
 user_two.save!
 puts "User 2 created"
 
-
 # Categories(5) - name
 cat_one = Category.new(name: "Wines")
 cat_one.save!
